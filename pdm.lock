@@ -5,7 +5,7 @@
 groups = ["default", "all-dev", "dev", "docs", "full", "plots", "tests", "tests-full", "tests-min"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:0aba4c7a7a10c074bffc0c8fe15375ba52b8116c61ce50abdf956af08d7edb9d"
+content_hash = "sha256:958dc9cc38c30e5fe424cf167022254a483b74489561d43b762818ee7f402d61"
 
 [[metadata.targets]]
 requires_python = ">=3.9"
@@ -719,6 +719,34 @@ groups = ["all-dev", "dev"]
 files = [
     {file = "filelock-3.16.1-py3-none-any.whl", hash = "sha256:2082e5703d51fbf98ea75855d9d5527e33d8ff23099bec374a134febee6946b0"},
     {file = "filelock-3.16.1.tar.gz", hash = "sha256:c249fbfcd5db47e5e2d6d62198e565475ee65e4831e2561c8e313fa7eb961435"},
+]
+
+[[package]]
+name = "flexcache"
+version = "0.3"
+requires_python = ">=3.9"
+summary = "Saves and loads to the cache a transformed versions of a source object."
+groups = ["all-dev", "tests"]
+dependencies = [
+    "typing-extensions",
+]
+files = [
+    {file = "flexcache-0.3-py3-none-any.whl", hash = "sha256:d43c9fea82336af6e0115e308d9d33a185390b8346a017564611f1466dcd2e32"},
+    {file = "flexcache-0.3.tar.gz", hash = "sha256:18743bd5a0621bfe2cf8d519e4c3bfdf57a269c15d1ced3fb4b64e0ff4600656"},
+]
+
+[[package]]
+name = "flexparser"
+version = "0.4"
+requires_python = ">=3.9"
+summary = "Parsing made fun ... using typing."
+groups = ["all-dev", "tests"]
+dependencies = [
+    "typing-extensions",
+]
+files = [
+    {file = "flexparser-0.4-py3-none-any.whl", hash = "sha256:3738b456192dcb3e15620f324c447721023c0293f6af9955b481e91d00179846"},
+    {file = "flexparser-0.4.tar.gz", hash = "sha256:266d98905595be2ccc5da964fe0a2c3526fbbffdc45b65b3146d75db992ef6b2"},
 ]
 
 [[package]]
@@ -2207,6 +2235,23 @@ files = [
 ]
 
 [[package]]
+name = "pint"
+version = "0.24.4"
+requires_python = ">=3.9"
+summary = "Physical quantities module"
+groups = ["all-dev", "tests"]
+dependencies = [
+    "flexcache>=0.3",
+    "flexparser>=0.4",
+    "platformdirs>=2.1.0",
+    "typing-extensions>=4.0.0",
+]
+files = [
+    {file = "Pint-0.24.4-py3-none-any.whl", hash = "sha256:aa54926c8772159fcf65f82cc0d34de6768c151b32ad1deb0331291c38fe7659"},
+    {file = "pint-0.24.4.tar.gz", hash = "sha256:35275439b574837a6cd3020a5a4a73645eb125ce4152a73a2f126bf164b91b80"},
+]
+
+[[package]]
 name = "pip"
 version = "24.3.1"
 requires_python = ">=3.8"
@@ -2222,7 +2267,7 @@ name = "platformdirs"
 version = "4.3.6"
 requires_python = ">=3.8"
 summary = "A small Python package for determining appropriate platform-specific dirs, e.g. a `user data dir`."
-groups = ["all-dev", "dev", "docs"]
+groups = ["all-dev", "dev", "docs", "tests"]
 files = [
     {file = "platformdirs-4.3.6-py3-none-any.whl", hash = "sha256:73e575e1408ab8103900836b97580d5307456908a03e92031bab39e4554cc3fb"},
     {file = "platformdirs-4.3.6.tar.gz", hash = "sha256:357fb2acbc885b0419afd3ce3ed34564c13c9b95c89360cd9563f73aa5e2b907"},
@@ -3142,7 +3187,7 @@ name = "typing-extensions"
 version = "4.12.2"
 requires_python = ">=3.8"
 summary = "Backported and Experimental Type Hints for Python 3.8+"
-groups = ["all-dev", "dev", "docs"]
+groups = ["all-dev", "dev", "docs", "tests"]
 files = [
     {file = "typing_extensions-4.12.2-py3-none-any.whl", hash = "sha256:04e5ca0351e0f3f85c6853954072df659d0d13fac324d0072316b67d7794700d"},
     {file = "typing_extensions-4.12.2.tar.gz", hash = "sha256:1a7ead55c7e559dd4dee8856e3a88b41225abfe1ce8df57b7c13915fe121ffb8"},

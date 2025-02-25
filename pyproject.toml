@@ -235,6 +235,7 @@ tests-full = [
 tests = [
     {include-group = "tests-min"},
     {include-group = "tests-full"},
+    "pint>=0.24.4",
 ]
 all-dev = [
     {include-group = "dev"},
